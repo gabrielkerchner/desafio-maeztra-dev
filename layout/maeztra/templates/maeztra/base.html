@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Maeztra</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+          $(window).on('load', function() {
+              $('#myModal').modal('show');
+          });
+        </script>
+      </head>
+    <body>
+      <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="row">
+              <div class="col-sm-6" id="row-modal-img">
+                <img src="{% static 'images/modal.jpg' %}" alt="modal">
+              </div>
+              <div class="col-sm-6">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="{% static 'svgs/mail.svg' %}" alt="mail">
+                  <p><br>Bem Vindo à MAEZTRA</p>
+                  <p>Receba em Primeira mão
+                    desconto e ofertas exclusivas</p>
+                </div>
+                <div class="modal-footer">
+                  <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu E-mail">
+                    </div>
+                    <button data-dismiss="modal" class="btn btn-warning">Enviar <img src="{% static 'svgs/airplane.svg' %}" alt="airplane"></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="top-bar">Acompanhe as melhores promoções disponíveis aqui na Maeztra.</p>
+      <nav class="navbar navbar-expand-lg navbar-light" id="header-1">
+        <div class="col-sm-2" id="logo">
+          <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/StZVfCx/logo-maeztra-novo.png" alt="Maeztra">
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-6" id="search-bar">
+          <form class="form-inline my-2 my-lg-0">
+            <input type="text" class="form-control" placeholder="O Que Você Busca?" aria-label="O Que Você Busca?" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-search">Buscar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-4">
+          <ul class="navbar-nav mr-auto" id="menu-items">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="{% static 'svgs/user-regular.svg' %}" id="icon"> Minha Conta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="{% static 'svgs/heart-regular.svg' %}" id="icon"> Minha Conta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="{% static 'svgs/shopping-bag.svg' %}" id="icon"> Meu Carrinho</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light" id="header-1-mobile">
+        <div class="row">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="logo">
+            <a class="navbar-brand" href="#">
+              <img src="https://i.ibb.co/StZVfCx/logo-maeztra-novo.png" alt="Maeztra">
+            </a>
+          </div>
+          <img src="{% static 'svgs/search.svg' %}" class="icons-mobile-header">
+          <img src="{% static 'svgs/shopping-bag.svg' %}" class="icons-mobile-header">
+        </div>
+        <div class="col-sm-4">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="menu-items">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="news"> Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vestidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Roupas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sapatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lingerie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acessórios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">OUTLET</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="{% static 'svgs/user-regular.svg' %}" id="icon"> Minha Conta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="{% static 'svgs/heart-regular.svg' %}" id="icon"> Minha Conta</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" id="header-2">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="news"> Novidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vestidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Roupas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sapatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lingerie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acessórios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">OUTLET</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+        {% block body_block %}
+        {% endblock %}
+        <div class="row" id="footer-1">
+          <div class="col-4">
+            <h5>Informações</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prazo de Envio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Trocas e Devoluções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Promoções e Cupons</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <h5>Minha Conta</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Minha Conta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Meus Pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cadastre-se</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <h5>Onde nos Encontrar</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Lojas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Endereço</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" id="footer-1-mobile">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Informações <img src="{% static 'svgs/plus.svg' %}" alt="plus-sign">
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Prazo de Envio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Trocas e Devoluções</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Promoções e Cupons</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Minha Conta <img src="{% static 'svgs/plus.svg' %}" alt="plus-sign">
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Minha Conta</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Meus Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Cadastre-se</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Onde nos Encontrar <img src="{% static 'svgs/plus.svg' %}" alt="plus-sign">
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Lojas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Endereço</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="footer-2">
+          <div class="col-4">
+            <div class="row">
+              <img src="{% static 'svgs/facebook.svg' %}" class="icons-social">
+              <img src="{% static 'svgs/linkedin.svg' %}" class="icons-social">
+              <img src="{% static 'svgs/instagram.svg' %}" class="icons-social">
+              <img src="{% static 'svgs/youtube.svg' %}" class="icons-social">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row">
+              <img src="{% static 'svgs/visa.svg' %}" class="icons-cards">
+              <img src="{% static 'svgs/mastercard.svg' %}" class="icons-cards">
+              <img src="{% static 'svgs/visa.svg' %}" class="icons-cards">
+              <img src="{% static 'svgs/mastercard.svg' %}" class="icons-cards">
+            </div>
+          </div>
+          <div class="col-4" id="vtex-row"> 
+            <div class="row">
+              <div class="col-3">
+                <p class="powered-by">Powered By</p>
+                <img src="{% static 'svgs/vtex.svg' %}" class="icon-vtex">
+              </div>
+              <div class="col-3">
+                <p class="powered-by">Developed By</p>
+                <img src="{% static 'svgs/maeztra-white.svg' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
